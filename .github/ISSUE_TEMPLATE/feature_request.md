@@ -11,8 +11,8 @@ assignees: ''
 
 
 ### TODO
-[ ] TODO1
-[ ] TODO2
-[ ] TODO3
+- [ ] TODO1
+- [ ] TODO2
+- [ ] TODO3
 
 ### 참고사항
