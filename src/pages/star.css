@@ -1,24 +1,22 @@
-/* 별똥별 */
-
 #landing {
   z-index: 100;
 }
 
 .night {
   position: absolute;
-  overflow: hidden;
-  width: 200%;
-  height: 200%;
+  width: 150%;
+  height: 150%;
+  transform: rotateZ(45deg);
 }
 
 .shooting_star {
   position: absolute;
-  /* left: 50%;
-  top: 50%; */
+  left: 100%;
+  top: 100%;
   height: 2px;
-  background: linear-gradient(-45deg, #5f91ff, rgba(255, 255, 255, 0));
+  background: linear-gradient(-45deg, #5f91ff, rgba(0, 0, 255, 0));
   border-radius: 999px;
-  filter: drop-shadow(0 0 6px white);
+  filter: drop-shadow(0 0 6px #699bff);
   -webkit-animation: tail 3000ms ease-in-out infinite,
     shooting 3000ms ease-in-out infinite;
   animation: tail 3000ms ease-in-out infinite,
@@ -82,8 +80,8 @@
   animation-delay: 3000ms;
 }
 .shooting_star:nth-child(3) {
-  top: 50%;
-  left: 20%;
+  top: 45%;
+  left: -10%;
   -webkit-animation-delay: 4700ms;
   animation-delay: 4700ms;
 }
@@ -93,8 +91,8 @@
   animation-delay: 4700ms;
 }
 .shooting_star:nth-child(4) {
-  top: 20%;
-  left: 60%;
+  top: 60%;
+  left: 10%;
   -webkit-animation-delay: 4200ms;
   animation-delay: 4200ms;
 }
@@ -148,8 +146,8 @@
   animation-delay: 4224ms;
 }
 .shooting_star:nth-child(9) {
-  top: calc(50% - -184px);
-  left: calc(50% - 92px);
+  top: 80%;
+  left: 50%;
   -webkit-animation-delay: 3874ms;
   animation-delay: 3874ms;
 }
@@ -170,8 +168,8 @@
   animation-delay: 3010ms;
 }
 .shooting_star:nth-child(11) {
-  top: 70%;
-  left: 50%;
+  top: 30%;
+  left: 0%;
   -webkit-animation-delay: 3720ms;
   animation-delay: 3720ms;
 }
@@ -181,8 +179,8 @@
   animation-delay: 3720ms;
 }
 .shooting_star:nth-child(12) {
-  top: 50%;
-  left: 60%;
+  top: 0%;
+  left: 0%;
   -webkit-animation-delay: 3430ms;
   animation-delay: 3430ms;
 }
@@ -253,4 +251,3 @@
     transform: translateX(300px);
   }
 }
-/*  */

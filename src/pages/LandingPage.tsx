@@ -5,7 +5,6 @@ import EnterButton from "../components/ui/EnterButton";
 import "./star.css";
 
 const LandingPage = () => {
-  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const enterHandler = () => {
     sessionStorage.setItem("isLanding", "false");
@@ -17,22 +16,18 @@ const LandingPage = () => {
     if (isLanding == "false") {
       navigate("/home", { replace: true });
     }
-
-    setTimeout(() => setIsLoading(true), 100);
   }, []);
 
   const stars = new Array(12).fill(1);
 
   return (
     <Layout bg="main">
-      {isLoading && (
-        <div className="night rotate-45">
-          {stars.map((star, index) => (
-            <div key={index} className="shooting_star"></div>
-          ))}
-          )
-        </div>
-      )}
+      <div className="night">
+        {stars.map((star, index) => (
+          <div key={index} className="shooting_star"></div>
+        ))}
+        )
+      </div>
       <article
         id="landing"
         className="flex flex-col items-center justify-between"
