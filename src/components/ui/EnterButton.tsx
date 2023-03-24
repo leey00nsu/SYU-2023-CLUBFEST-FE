@@ -6,7 +6,7 @@ const EnterButton = (props: EnterButtonProps) => {
   return (
     <a
       onClick={props.onClick}
-      className="cursor-pointer w-60 rounded-lg bg-black/50 text-yellow-400 p-2 text-center"
+      className="p-1 text-center text-black bg-white cursor-pointer  font-PyeongChang w-60 rounded-2xl"
     >
       {props.children}
     </a>
