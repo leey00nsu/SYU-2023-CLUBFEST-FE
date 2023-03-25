@@ -21,7 +21,7 @@ const LandingPage = () => {
   const stars = new Array(12).fill(1);
 
   return (
-    <Layout bg="main">
+    <Layout bg="landing">
       <div className="night">
         {stars.map((star, index) => (
           <div key={index} className="shooting_star"></div>

@@ -6,9 +6,10 @@ const EnterButton = (props: EnterButtonProps) => {
   return (
     <a
       onClick={props.onClick}
-      className="p-1 text-center text-black bg-white cursor-pointer  font-PyeongChang w-60 rounded-2xl"
+      className="flex justify-center p-1 text-base text-black bg-white cursor-pointer font-PyeongChang w-60 rounded-2xl"
     >
       {props.children}
+      <img className=" ml-1 w-3 object-contain" src="img/rabbit.png" />
     </a>
   );
 };
