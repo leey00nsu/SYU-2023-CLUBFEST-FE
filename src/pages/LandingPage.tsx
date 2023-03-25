@@ -32,10 +32,10 @@ const LandingPage = () => {
         id="landing"
         className="flex flex-col items-center justify-between"
       >
-        <p className="mb-2 text-base text-white font-PyeongChang">
+        <p className="mb-2 text-base text-white font-PyeongChangPeace">
           멋쟁이사자처럼 SYU X 동아리연합회 다원
         </p>
-        <p className="mb-6 text-4xl text-white text-glow font-PyeongChangBold">
+        <p className="mb-6 text-4xl text-white text-glow font-PyeongChangPeaceBold">
           2023-1 동아리제
         </p>
         <EnterButton onClick={enterHandler}>동아리제 구경하기</EnterButton>

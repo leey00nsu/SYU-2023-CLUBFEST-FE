@@ -39,10 +39,13 @@ const ClubList = (props: ClubListProps) => {
     });
   }
   return (
-    <article>
+    <article className="w-full justify-center flex flex-wrap gap-6">
       {list.map((list, index) => (
         <ClubListBox key={index} data={list} />
       ))}
+      {list.length % 2 == 1 && (
+        <div className=" invisible flex flex-col w-48 p-2 bg-white rounded-lg h-36"></div>
+      )}
     </article>
   );
 };

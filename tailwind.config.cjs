@@ -3,9 +3,13 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      colors: {
+        "clubfest-blue": "#0D1C57",
+      },
       fontFamily: {
-        PyeongChangBold: ["PyeongChangPeace-Bold", "Arial"],
-        PyeongChang: ["PyeongChangPeace", "Arial"],
+        PyeongChangPeaceBold: ["PyeongChangPeace-Bold", "Arial"],
+        PyeongChangPeace: ["PyeongChangPeace", "Arial"],
+        PyeongChang: ["PyeongChang", "Arial"],
       },
     },
   },

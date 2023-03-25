@@ -4,7 +4,6 @@ import SortButton from "../components/ui/SortButton";
 import InputBar from "../components/ui/InputBar";
 import ClubList from "../components/ClubList";
 import { useState } from "react";
-import SideBar from "../components/ui/SideBar";
 
 const dummyList = [
   {
@@ -42,6 +41,41 @@ const dummyList = [
     clubImg: "/img/",
     clubRank: 5,
   },
+  {
+    clubName: "마테스트",
+    clubSection: "분과5",
+    clubDesc: "동아리 소개 5",
+    clubImg: "/img/",
+    clubRank: 5,
+  },
+  {
+    clubName: "마테스트",
+    clubSection: "분과5",
+    clubDesc: "동아리 소개 5",
+    clubImg: "/img/",
+    clubRank: 5,
+  },
+  {
+    clubName: "마테스트",
+    clubSection: "분과5",
+    clubDesc: "동아리 소개 5",
+    clubImg: "/img/",
+    clubRank: 5,
+  },
+  {
+    clubName: "마테스트",
+    clubSection: "분과5",
+    clubDesc: "동아리 소개 5",
+    clubImg: "/img/",
+    clubRank: 5,
+  },
+  {
+    clubName: "마테스트",
+    clubSection: "분과5",
+    clubDesc: "동아리 소개 5",
+    clubImg: "/img/",
+    clubRank: 5,
+  },
 ];
 
 const MainPage = () => {
@@ -56,32 +90,31 @@ const MainPage = () => {
   const toggleSideBarHandler = () => {
     setIsCollapsed((prev) => !prev);
   };
+
   return (
     <Layout>
-      {!isCollapsed && <SideBar toggleSideBar={toggleSideBarHandler} />}
-      <Header toggleSideBar={toggleSideBarHandler} />
-      <section className="w-full flex flex-col justify-center items-center p-4">
-        <article className="mb-4">
-          <p>지원기간 : 00 ~ 00</p>
-          <p>2023-2학기에 신설된 신규 동아리는 포함되어 있지 않습니다</p>
-        </article>
-        <InputBar />
-      </section>
-      <section className="w-full p-4">
-        <div className="flex justify-start">
-          <SortButton value="rank" sortBy={sortBy} onClick={sortByRankHandler}>
-            동아리 순위 순
-          </SortButton>
-          <SortButton
-            value="alphabet"
-            sortBy={sortBy}
-            onClick={sortByAscendingHandler}
-          >
-            가나다 순
-          </SortButton>
+      <Header />
+      <section className="w-full flex justify-between mb-8">
+        <div className="w-2/6 text-center text-sm text-white font-PyeongChang">
+          동아리 소개
+        </div>
+        <div className="w-2/6 text-center text-sm text-white font-PyeongChang">
+          동아리제 타임테이블
+        </div>
+        <div className="w-2/6 text-center text-sm text-white font-PyeongChang">
+          About
         </div>
       </section>
-      <section className="w-full px-4 grow overflow-y-auto">
+      <section className="w-full flex justify-center mb-8">
+        <div className="text-sm text-white font-PyeongChang">문화분과</div>
+        <div className="mx-4 text-sm text-white font-PyeongChang">|</div>
+        <div className="text-sm text-white font-PyeongChang">봉사분과</div>
+        <div className="mx-4 text-sm text-white font-PyeongChang">|</div>
+        <div className="text-sm text-white font-PyeongChang">체육분과</div>
+        <div className="mx-4 text-sm text-white font-PyeongChang">|</div>
+        <div className="text-sm text-white font-PyeongChang">학술분과</div>
+      </section>
+      <section className="w-full p-4 grow overflow-y-auto ">
         <ClubList sortBy={sortBy} list={dummyList} />
       </section>
     </Layout>
