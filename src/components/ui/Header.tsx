@@ -1,23 +1,13 @@
-import { BiMenu } from "react-icons/bi";
-
-interface HeaderProps {
-  toggleSideBar: () => void;
-}
-
-const Header = (props: HeaderProps) => {
-  const menuButtonHandler = () => {
-    props.toggleSideBar();
-  };
+const Header = () => {
   return (
-    <header className="flex items-center justify-between w-full h-10 p-4">
-      <div onClick={menuButtonHandler}>
-        <BiMenu size={30} color="white" />
-      </div>
-      <div>
-        <p className="text-lg font-semibold text-white">동아리 홍보전</p>
-      </div>
-      <div>
-        <div className="text-lg font-semibold text-white">D-00</div>
+    <header className="flex items-center justify-center w-full p-6">
+      <div className="flex flex-col items-center">
+        <p className="mb-1 text-3xl text-white font-PyeongChangBold">
+          2023-1 동아리제
+        </p>
+        <p className="text-[13px] text-white font-PyeongChang">
+          멋쟁이사자처럼 SYU X 동아리연합회 다원
+        </p>
       </div>
     </header>
   );

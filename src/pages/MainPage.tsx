@@ -4,7 +4,6 @@ import SortButton from "../components/ui/SortButton";
 import InputBar from "../components/ui/InputBar";
 import ClubList from "../components/ClubList";
 import { useState } from "react";
-import SideBar from "../components/ui/SideBar";
 
 const dummyList = [
   {
@@ -56,10 +55,10 @@ const MainPage = () => {
   const toggleSideBarHandler = () => {
     setIsCollapsed((prev) => !prev);
   };
+
   return (
     <Layout>
-      {!isCollapsed && <SideBar toggleSideBar={toggleSideBarHandler} />}
-      <Header toggleSideBar={toggleSideBarHandler} />
+      <Header />
       <section className="w-full flex flex-col justify-center items-center p-4">
         <article className="mb-4">
           <p>지원기간 : 00 ~ 00</p>
