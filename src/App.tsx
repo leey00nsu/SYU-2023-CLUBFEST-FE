@@ -7,8 +7,20 @@ import LoadingSpinner from "./components/ui/LoadingSpinner";
 import LandingPage from "./pages/LandingPage";
 
 function App() {
+  const handleResize = () => {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className="w-screen h-screen flex justify-center overflow-y-auto">
+    <div id="app" className="w-screen flex justify-center overflow-y-auto">
       <Suspense fallback={<LoadingSpinner size="lg" full />}>
         <Routes>
           <Route path="/" element={<LandingPage />} />

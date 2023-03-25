@@ -6,7 +6,7 @@ interface LayoutProps {
 }
 const Layout = (props: LayoutProps) => {
   let styles =
-    "bg-cover bg-[url('/img/main_background.png')] overflow-hidden relative  flex flex-col max-w-[500px] w-full h-full justify-center items-center ";
+    "bg-cover bg-[url('/img/main_background.png')] overflow-hidden relative h-full flex flex-col max-w-[500px] w-full justify-center items-center ";
   if (props.bg === "landing") {
     styles =
       "bg-cover bg-[url('/img/landing_background.png')] overflow-hidden relative  flex flex-col max-w-[500px] w-full h-full justify-center items-center";
