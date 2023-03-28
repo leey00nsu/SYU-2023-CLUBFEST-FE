@@ -116,3 +116,21 @@ button:focus-visible {
 .glow-underline {
   @apply border-b-2;
 }
+
+.moving-element {
+  position: absolute; /* 요소의 위치를 설정합니다. */
+  left: 0; /* 요소의 초기 위치를 설정합니다. */
+  bottom: 60%;
+  animation: move 2s linear infinite; /* 애니메이션을 적용합니다. */
+}
+
+@keyframes move {
+  from {
+    left: 0; /* 요소의 초기 위치를 설정합니다. */
+    transform: rotate(0deg);
+  }
+  to {
+    left: 100%; /* 요소가 이동할 최종 위치를 설정합니다. */
+    transform: rotate(720deg);
+  }
+}
