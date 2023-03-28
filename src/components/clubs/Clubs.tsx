@@ -1,4 +1,6 @@
 import ClubList from "./ClubList";
+import { useState } from "react";
+import DivisionButton from "./divisionButton";
 
 const dummyList = [
   {
@@ -74,18 +76,41 @@ const dummyList = [
 ];
 
 const Clubs = () => {
+  const [division, setDivision] = useState("문화분과");
+  // 문화분과,봉사분과,체육분과,학술분과
+  const divisions = ["문화분과", "봉사분과", "체육분과", "학술분과"];
+
+  const changeDivisionHandler = (changedDivision: string) => {
+    setDivision(changedDivision);
+  };
   return (
     <>
-      <section className="w-full flex justify-center mb-8">
-        <div className="text-sm text-white font-PyeongChang">문화분과</div>
+      <section className="flex justify-center w-full mb-8">
+        <DivisionButton
+          division="문화분과"
+          activeDivision={division}
+          changeDivision={changeDivisionHandler}
+        />
         <div className="mx-4 text-sm text-white font-PyeongChang">|</div>
-        <div className="text-sm text-white font-PyeongChang">봉사분과</div>
+        <DivisionButton
+          division="봉사분과"
+          activeDivision={division}
+          changeDivision={changeDivisionHandler}
+        />
         <div className="mx-4 text-sm text-white font-PyeongChang">|</div>
-        <div className="text-sm text-white font-PyeongChang">체육분과</div>
+        <DivisionButton
+          division="체육분과"
+          activeDivision={division}
+          changeDivision={changeDivisionHandler}
+        />
         <div className="mx-4 text-sm text-white font-PyeongChang">|</div>
-        <div className="text-sm text-white font-PyeongChang">학술분과</div>
+        <DivisionButton
+          division="학술분과"
+          activeDivision={division}
+          changeDivision={changeDivisionHandler}
+        />
       </section>
-      <section className="w-full p-4 grow overflow-y-auto ">
+      <section className="w-full p-4 overflow-y-auto grow ">
         <ClubList sortBy="alphabet" list={dummyList} />
       </section>
     </>
