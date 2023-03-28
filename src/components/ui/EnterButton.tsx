@@ -9,7 +9,10 @@ const EnterButton = (props: EnterButtonProps) => {
       className="flex justify-center p-1 text-base text-black bg-white cursor-pointer font-PyeongChang w-60 rounded-2xl"
     >
       {props.children}
-      <img className=" ml-1 w-3 object-contain" src="img/rabbit.png" />
+      <img
+        className=" ml-1 w-3 object-contain"
+        src="src/assets/img/rabbit.png"
+      />
     </a>
   );
 };
