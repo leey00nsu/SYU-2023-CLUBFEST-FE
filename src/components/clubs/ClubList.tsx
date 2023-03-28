@@ -43,6 +43,7 @@ const ClubList = (props: ClubListProps) => {
       {list.map((list, index) => (
         <ClubListBox key={index} data={list} />
       ))}
+      {/* 리스트의 마지막이 홀수이면 가상의 박스를 하나 추가하여 열을 맞춥니다. */}
       {list.length % 2 == 1 && (
         <div className=" invisible flex flex-col w-48 p-2 bg-white rounded-lg h-36"></div>
       )}

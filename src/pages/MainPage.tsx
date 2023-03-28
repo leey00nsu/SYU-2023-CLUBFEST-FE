@@ -2,88 +2,22 @@ import Header from "../components/ui/Header";
 import Layout from "../components/ui/Layout";
 import SortButton from "../components/ui/SortButton";
 import InputBar from "../components/ui/InputBar";
-import ClubList from "../components/ClubList";
-import { useState } from "react";
+import ClubList from "../components/clubs/ClubList";
+import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import Clubs from "../components/clubs/Clubs";
 
-const dummyList = [
-  {
-    clubName: "나테스트",
-    clubSection: "분과1",
-    clubDesc: "동아리 소개 1",
-    clubImg: "/img/",
-    clubRank: 1,
-  },
-  {
-    clubName: "가테스트",
-    clubSection: "분과2",
-    clubDesc: "동아리 소개 2",
-    clubImg: "/img/",
-    clubRank: 2,
-  },
-  {
-    clubName: "라테스트",
-    clubSection: "분과3",
-    clubDesc: "동아리 소개 3",
-    clubImg: "/img/",
-    clubRank: 3,
-  },
-  {
-    clubName: "다테스트",
-    clubSection: "분과4",
-    clubDesc: "동아리 소개 4",
-    clubImg: "/img/",
-    clubRank: 4,
-  },
-  {
-    clubName: "마테스트",
-    clubSection: "분과5",
-    clubDesc: "동아리 소개 5",
-    clubImg: "/img/",
-    clubRank: 5,
-  },
-  {
-    clubName: "마테스트",
-    clubSection: "분과5",
-    clubDesc: "동아리 소개 5",
-    clubImg: "/img/",
-    clubRank: 5,
-  },
-  {
-    clubName: "마테스트",
-    clubSection: "분과5",
-    clubDesc: "동아리 소개 5",
-    clubImg: "/img/",
-    clubRank: 5,
-  },
-  {
-    clubName: "마테스트",
-    clubSection: "분과5",
-    clubDesc: "동아리 소개 5",
-    clubImg: "/img/",
-    clubRank: 5,
-  },
-  {
-    clubName: "마테스트",
-    clubSection: "분과5",
-    clubDesc: "동아리 소개 5",
-    clubImg: "/img/",
-    clubRank: 5,
-  },
-  {
-    clubName: "마테스트",
-    clubSection: "분과5",
-    clubDesc: "동아리 소개 5",
-    clubImg: "/img/",
-    clubRank: 5,
-  },
-];
+interface MainPageProps {
+  menu: string;
+}
 
-const MainPage = () => {
+const MainPage = (props: MainPageProps) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [sortBy, setSortBy] = useState("rank");
   const sortByRankHandler = () => {
     setSortBy("rank");
   };
+  /* sort 기능 구현되었지만 사용 X , alphabet으로 기본 설정됨 */
   const sortByAscendingHandler = () => {
     setSortBy("alphabet");
   };
@@ -91,32 +25,40 @@ const MainPage = () => {
     setIsCollapsed((prev) => !prev);
   };
 
+  const navActiveClasses =
+    "py-1 text-center text-sm text-white font-PyeongChang text-glow-hard glow-underline";
+  const navClasses = "py-1 text-center text-sm text-white font-PyeongChang";
+
   return (
     <Layout>
       <Header />
-      <section className="w-full flex justify-between mb-8">
-        <div className="w-2/6 text-center text-sm text-white font-PyeongChang">
+      <section className="flex justify-between w-full mb-8 px-20">
+        <NavLink
+          className={(navData) =>
+            navData.isActive ? navActiveClasses : navClasses
+          }
+          to="/clubs"
+        >
           동아리 소개
-        </div>
-        <div className="w-2/6 text-center text-sm text-white font-PyeongChang">
+        </NavLink>
+        <NavLink
+          className={(navData) =>
+            navData.isActive ? navActiveClasses : navClasses
+          }
+          to="/timetable"
+        >
           동아리제 타임테이블
-        </div>
-        <div className="w-2/6 text-center text-sm text-white font-PyeongChang">
+        </NavLink>
+        <NavLink
+          className={(navData) =>
+            navData.isActive ? navActiveClasses : navClasses
+          }
+          to="/about"
+        >
           About
-        </div>
+        </NavLink>
       </section>
-      <section className="w-full flex justify-center mb-8">
-        <div className="text-sm text-white font-PyeongChang">문화분과</div>
-        <div className="mx-4 text-sm text-white font-PyeongChang">|</div>
-        <div className="text-sm text-white font-PyeongChang">봉사분과</div>
-        <div className="mx-4 text-sm text-white font-PyeongChang">|</div>
-        <div className="text-sm text-white font-PyeongChang">체육분과</div>
-        <div className="mx-4 text-sm text-white font-PyeongChang">|</div>
-        <div className="text-sm text-white font-PyeongChang">학술분과</div>
-      </section>
-      <section className="w-full p-4 grow overflow-y-auto ">
-        <ClubList sortBy={sortBy} list={dummyList} />
-      </section>
+      {props.menu === "clubs" && <Clubs />}
     </Layout>
   );
 };
