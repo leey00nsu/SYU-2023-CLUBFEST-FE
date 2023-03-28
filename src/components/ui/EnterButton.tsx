@@ -11,7 +11,7 @@ const EnterButton = (props: EnterButtonProps) => {
       {props.children}
       <img
         className=" ml-1 w-3 object-contain"
-        src="src/assets/img/rabbit.png"
+        src="/src/assets/img/rabbit.png"
       />
     </a>
   );
