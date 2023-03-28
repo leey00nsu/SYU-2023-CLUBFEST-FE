@@ -1,6 +1,6 @@
+import DivisionButton from "./DivisionButton";
 import ClubList from "./ClubList";
 import { useState } from "react";
-import DivisionButton from "./divisionButton";
 
 const dummyList = [
   {
