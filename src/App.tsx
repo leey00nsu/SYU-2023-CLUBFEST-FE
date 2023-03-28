@@ -1,6 +1,7 @@
 import { useState, useEffect, Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import MainPage from "./pages/MainPage";
+import ErrorPage from "./pages/ErrorPage";
 import LoadingSpinner from "./components/ui/LoadingSpinner";
 
 // const LandingPage = lazy(() => import("./pages/LandingPage"));
@@ -24,7 +25,10 @@ function App() {
       <Suspense fallback={<LoadingSpinner size="lg" full />}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/home" element={<MainPage />} />
+          <Route path="/clubs" element={<MainPage menu="clubs" />} />
+          <Route path="/timetable" element={<MainPage menu="timetable" />} />
+          <Route path="/about" element={<MainPage menu="about" />} />
+          <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </Suspense>
     </div>
