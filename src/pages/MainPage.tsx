@@ -2,10 +2,10 @@ import Header from "../components/ui/Header";
 import Layout from "../components/ui/Layout";
 import SortButton from "../components/ui/SortButton";
 import InputBar from "../components/ui/InputBar";
-import ClubList from "../components/ClubList";
+import ClubList from "../components/clubs/ClubList";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import Clubs from "../components/Clubs";
+import Clubs from "../components/clubs/Clubs";
 
 interface MainPageProps {
   menu: string;

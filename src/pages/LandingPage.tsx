@@ -8,13 +8,13 @@ const LandingPage = () => {
   const navigate = useNavigate();
   const enterHandler = () => {
     sessionStorage.setItem("isLanding", "false");
-    navigate("/home", { replace: true });
+    navigate("/clubs", { replace: true });
   };
 
   useEffect(() => {
     const isLanding = sessionStorage.getItem("isLanding");
     if (isLanding == "false") {
-      navigate("/home", { replace: true });
+      navigate("/clubs", { replace: true });
     }
   }, []);
 
