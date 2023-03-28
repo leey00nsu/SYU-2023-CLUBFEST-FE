@@ -4,7 +4,7 @@ import SortButton from "../components/ui/SortButton";
 import InputBar from "../components/ui/InputBar";
 import ClubList from "../components/ClubList";
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Clubs from "../components/Clubs";
 
 interface MainPageProps {
@@ -17,6 +17,7 @@ const MainPage = (props: MainPageProps) => {
   const sortByRankHandler = () => {
     setSortBy("rank");
   };
+  /* sort 기능 구현되었지만 사용 X , alphabet으로 기본 설정됨 */
   const sortByAscendingHandler = () => {
     setSortBy("alphabet");
   };
@@ -24,19 +25,38 @@ const MainPage = (props: MainPageProps) => {
     setIsCollapsed((prev) => !prev);
   };
 
+  const navActiveClasses =
+    "py-1 text-center text-sm text-white font-PyeongChang text-glow-hard glow-underline";
+  const navClasses = "py-1 text-center text-sm text-white font-PyeongChang";
+
   return (
     <Layout>
       <Header />
-      <section className="w-full flex justify-between mb-8">
-        <div className="w-2/6 text-center text-sm text-white font-PyeongChang">
+      <section className="flex justify-between w-full mb-8 px-20">
+        <NavLink
+          className={(navData) =>
+            navData.isActive ? navActiveClasses : navClasses
+          }
+          to="/clubs"
+        >
           동아리 소개
-        </div>
-        <div className="w-2/6 text-center text-sm text-white font-PyeongChang">
+        </NavLink>
+        <NavLink
+          className={(navData) =>
+            navData.isActive ? navActiveClasses : navClasses
+          }
+          to="/timetable"
+        >
           동아리제 타임테이블
-        </div>
-        <div className="w-2/6 text-center text-sm text-white font-PyeongChang">
+        </NavLink>
+        <NavLink
+          className={(navData) =>
+            navData.isActive ? navActiveClasses : navClasses
+          }
+          to="/about"
+        >
           About
-        </div>
+        </NavLink>
       </section>
       {props.menu === "clubs" && <Clubs />}
     </Layout>
