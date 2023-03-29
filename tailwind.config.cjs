@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         "clubfest-blue": "#0D1C57",
+        "clubfest-gray": "#101010",
       },
       fontFamily: {
         PyeongChangPeaceBold: ["PyeongChangPeace-Bold", "Arial"],
