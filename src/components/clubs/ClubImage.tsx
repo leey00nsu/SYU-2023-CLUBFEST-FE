@@ -7,11 +7,11 @@ interface ClubImageProps {
 
 const ClubImage = (props: ClubImageProps) => {
   let classes =
-    "w-20 h-20 bg-gray-400 rounded-full flex flex-col justify-center items-center";
+    "w-20 h-20 bg-clubfest-deepgray rounded-full flex flex-col justify-center items-center";
 
   if (props.size === "md") {
     classes =
-      "w-24 h-24 bg-gray-400 rounded-full flex flex-col justify-center items-center";
+      "w-24 h-24 bg-clubfest-deepgray rounded-full flex flex-col justify-center items-center";
   }
   return (
     <div className={classes}>
