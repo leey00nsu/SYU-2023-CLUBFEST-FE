@@ -6,6 +6,8 @@ import ClubList from "../components/clubs/ClubList";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Clubs from "../components/clubs/Clubs";
+import Timetable from "../components/timetable/Timetable";
+import About from "../components/about/About";
 
 interface MainPageProps {
   menu: string;
@@ -59,6 +61,8 @@ const MainPage = (props: MainPageProps) => {
         </NavLink>
       </section>
       {props.menu === "clubs" && <Clubs />}
+      {props.menu === "timetable" && <Timetable />}
+      {props.menu === "about" && <About />}
     </Layout>
   );
 };
