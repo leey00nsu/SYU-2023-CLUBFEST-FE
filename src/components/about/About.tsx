@@ -1,12 +1,12 @@
 import AboutContent from "./AboutContent";
-import { TfiClose } from "react-icons/tfi";
+import x_svg from "../../assets/x.svg";
 
 const About = () => {
   return (
-    <div className="flex flex-col w-full grow ">
-      <section className="w-full flex flex-col items-center mb-20">
+    <div className="flex flex-col w-full grow overflow-y-auto ">
+      <section className="w-full flex flex-col items-center mb-14">
         <p className=" font-PyeongChang text-white text-sm mb-1">
-          삼육대학교 학우여러분, 안녕하세요!
+          삼육대학교 학우 여러분, 안녕하세요!
         </p>
         <p className=" font-PyeongChang text-white text-sm mb-1">
           멋쟁이사자처럼 삼육대학교 X 동아리연합회 다원 입니다.
@@ -30,7 +30,7 @@ const About = () => {
         buttonName="삼육멋사 11기 페이지"
       />
       <div className="w-full flex justify-center my-10">
-        <TfiClose className="text-glow text-white " size={60} />
+        <img className="svg-glow w-12" src={x_svg} />
       </div>
       <AboutContent
         title="멋쟁이사자처럼 삼육대학교 11기"

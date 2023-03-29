@@ -6,7 +6,7 @@ const Nav = () => {
     "py-1 text-center text-sm text-white font-PyeongChang text-glow-hard glow-underline";
   const navClasses = "py-1 text-center text-sm text-white font-PyeongChang";
   return (
-    <section className="flex justify-between w-full mb-8 px-20">
+    <section className=" flex w-full mb-8  justify-around">
       <NavLink
         className={(navData) =>
           navData.isActive ? navActiveClasses : navClasses

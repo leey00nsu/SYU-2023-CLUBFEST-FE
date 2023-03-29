@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      xs: "500px",
+    },
     extend: {
       colors: {
         "clubfest-blue": "#0D1C57",
