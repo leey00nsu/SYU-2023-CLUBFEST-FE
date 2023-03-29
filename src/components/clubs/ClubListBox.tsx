@@ -1,4 +1,5 @@
 import { ClubProps } from "./ClubList";
+import DefaultImage from "./DefaultImage";
 
 interface ClubListBoxProps {
   data: ClubProps;
@@ -17,7 +18,7 @@ const ClubListBox = (props: ClubListBoxProps) => {
         </p>
       </section>
       <section className="flex justify-end h-full ">
-        <div className="w-16 h-16 bg-gray-400 rounded-full "></div>
+        <DefaultImage />
       </section>
     </div>
   );
