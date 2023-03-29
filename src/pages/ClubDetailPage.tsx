@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import ErrorPage from "./ErrorPage";
 import LoadingSpinner from "../components/ui/LoadingSpinner";
 import { useNavigate } from "react-router-dom";
+import ClubContent from "../components/clubs/ClubContent";
 
 const ClubDetailPage = () => {
   const navigate = useNavigate();
@@ -42,39 +43,26 @@ const ClubDetailPage = () => {
                 </p>
               </div>
             </section>
-            <section className="flex flex-col items-center w-full mb-8">
-              <p className="w-full text-start font-PyeongChang text-clubfest-blue  border-clubfest-blue border-b-2 py-1 mb-2">
-                동아리 소개
-              </p>
-              <p className="w-full text-start font-PyeongChang text-clubfest-gray">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+
+            <ClubContent
+              title="동아리 소개"
+              content="Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Deserunt laborum fuga minima commodi doloribus non temporibus
                 neque rerum? Aliquam ipsa laborum repellat similique
-                repellendus! Fugiat quos commodi omnis dolores incidunt.
-              </p>
-            </section>
-            <section className="flex flex-col items-center w-full mb-8">
-              <p className="w-full text-start font-PyeongChang text-clubfest-blue  border-clubfest-blue border-b-2 py-1 mb-2">
-                주요활동
-              </p>
-              <p className="w-full text-start font-PyeongChang text-clubfest-gray">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                repellendus! Fugiat quos commodi omnis dolores incidunt."
+            />
+            <ClubContent
+              title="주요활동"
+              content="Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Deserunt laborum fuga minima commodi doloribus non temporibus
                 neque rerum? Aliquam ipsa laborum repellat similique
-                repellendus! Fugiat quos commodi omnis dolores incidunt.
-              </p>
-            </section>
-            <section className="flex flex-col items-center w-full mb-8">
-              <p className="w-full text-start font-PyeongChang text-clubfest-blue  border-clubfest-blue border-b-2 py-1 mb-2">
-                문의 및 SNS
-              </p>
-              <p className="w-full text-start font-PyeongChang text-clubfest-gray">
-                카카오톡 채널 '동아리채널'
-              </p>
-              <p className="w-full text-start font-PyeongChang text-clubfest-gray">
-                010-0000-0000
-              </p>
-            </section>
+                repellendus! Fugiat quos commodi omnis dolores incidunt."
+            />
+            <ClubContent
+              title="문의 및 SNS"
+              content="카카오톡 채널 '동아리 채널'"
+              content2="010-1234-5678"
+            />
           </article>
         )}
       </section>
