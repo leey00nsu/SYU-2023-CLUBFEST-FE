@@ -76,39 +76,29 @@ const dummyList = [
 ];
 
 const Clubs = () => {
-  const [division, setDivision] = useState("문화분과");
+  const [curDivision, setCurDivision] = useState("문화분과");
   // 문화분과,봉사분과,체육분과,학술분과
   const divisions = ["문화분과", "봉사분과", "체육분과", "학술분과"];
 
   const changeDivisionHandler = (changedDivision: string) => {
-    setDivision(changedDivision);
+    setCurDivision(changedDivision);
   };
   return (
     <>
       <section className="flex justify-center w-full mb-8">
-        <DivisionButton
-          division="문화분과"
-          activeDivision={division}
-          changeDivision={changeDivisionHandler}
-        />
-        <div className="mx-4 text-sm text-white font-PyeongChang">|</div>
-        <DivisionButton
-          division="봉사분과"
-          activeDivision={division}
-          changeDivision={changeDivisionHandler}
-        />
-        <div className="mx-4 text-sm text-white font-PyeongChang">|</div>
-        <DivisionButton
-          division="체육분과"
-          activeDivision={division}
-          changeDivision={changeDivisionHandler}
-        />
-        <div className="mx-4 text-sm text-white font-PyeongChang">|</div>
-        <DivisionButton
-          division="학술분과"
-          activeDivision={division}
-          changeDivision={changeDivisionHandler}
-        />
+        {divisions.map((division, index) => (
+          <>
+            <DivisionButton
+              key={index}
+              division={division}
+              activeDivision={curDivision}
+              changeDivision={changeDivisionHandler}
+            />
+            {index !== divisions.length - 1 && (
+              <div className="mx-4 text-sm text-white font-PyeongChang">|</div>
+            )}
+          </>
+        ))}
       </section>
       <section className="w-full p-4 overflow-y-auto grow ">
         <ClubList sortBy="alphabet" list={dummyList} />
