@@ -2,6 +2,7 @@ import { useState, useEffect, Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import ErrorPage from "./pages/ErrorPage";
+import ClubDetailPage from "./pages/ClubDetailPage";
 import LoadingSpinner from "./components/ui/LoadingSpinner";
 
 // const LandingPage = lazy(() => import("./pages/LandingPage"));
@@ -26,6 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/clubs" element={<MainPage menu="clubs" />} />
+          <Route path="/clubs/:clubId" element={<ClubDetailPage />} />
           <Route path="/timetable" element={<MainPage menu="timetable" />} />
           <Route path="/about" element={<MainPage menu="about" />} />
           <Route path="/*" element={<ErrorPage />} />

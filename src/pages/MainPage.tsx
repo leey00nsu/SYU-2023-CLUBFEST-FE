@@ -6,6 +6,9 @@ import ClubList from "../components/clubs/ClubList";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Clubs from "../components/clubs/Clubs";
+import Timetable from "../components/timetable/Timetable";
+import About from "../components/about/About";
+import Nav from "../components/ui/Nav";
 
 interface MainPageProps {
   menu: string;
@@ -25,40 +28,13 @@ const MainPage = (props: MainPageProps) => {
     setIsCollapsed((prev) => !prev);
   };
 
-  const navActiveClasses =
-    "py-1 text-center text-sm text-white font-PyeongChang text-glow-hard glow-underline";
-  const navClasses = "py-1 text-center text-sm text-white font-PyeongChang";
-
   return (
     <Layout>
       <Header />
-      <section className="flex justify-between w-full mb-8 px-20">
-        <NavLink
-          className={(navData) =>
-            navData.isActive ? navActiveClasses : navClasses
-          }
-          to="/clubs"
-        >
-          동아리 소개
-        </NavLink>
-        <NavLink
-          className={(navData) =>
-            navData.isActive ? navActiveClasses : navClasses
-          }
-          to="/timetable"
-        >
-          동아리제 타임테이블
-        </NavLink>
-        <NavLink
-          className={(navData) =>
-            navData.isActive ? navActiveClasses : navClasses
-          }
-          to="/about"
-        >
-          About
-        </NavLink>
-      </section>
+      <Nav />
       {props.menu === "clubs" && <Clubs />}
+      {props.menu === "timetable" && <Timetable />}
+      {props.menu === "about" && <About />}
     </Layout>
   );
 };
