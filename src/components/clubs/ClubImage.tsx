@@ -13,6 +13,11 @@ const ClubImage = (props: ClubImageProps) => {
     classes =
       "w-24 h-24 bg-clubfest-deepgray rounded-full flex flex-col justify-center items-center";
   }
+
+  if (props.size === "lg") {
+    classes =
+      "w-28 h-28 bg-clubfest-deepgray rounded-full flex flex-col justify-center items-center";
+  }
   return (
     <div className={classes}>
       <p className=" text-white font-PyeongChangPeace text-xs">2023-1</p>
@@ -23,7 +28,7 @@ const ClubImage = (props: ClubImageProps) => {
 };
 
 ClubImage.defaultProps = {
-  default: false,
+  default: true,
   size: "sm",
 };
 
