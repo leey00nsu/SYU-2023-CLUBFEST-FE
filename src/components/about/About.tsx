@@ -3,7 +3,7 @@ import x_svg from "../../assets/x.svg";
 
 const About = () => {
   return (
-    <div className="flex flex-col w-full grow ">
+    <div className="flex flex-col w-full grow overflow-y-auto ">
       <section className="w-full flex flex-col items-center mb-14">
         <p className=" font-PyeongChang text-white text-sm mb-1">
           삼육대학교 학우 여러분, 안녕하세요!

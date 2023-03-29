@@ -19,10 +19,10 @@ const ClubListBox = (props: ClubListBoxProps) => {
       className=" cursor-pointer flex flex-col w-5/12 p-2  bg-white rounded-lg h-36"
     >
       <section className="flex flex-col justify-center h-full ">
-        <p className="text-xl font-PyeongChangPeaceBold text-clubfest-blue">
+        <p className="xs:text-xl text-lg font-PyeongChangPeaceBold text-clubfest-blue">
           {clubName}
         </p>
-        <p className="text-base font-PyeongChang text-clubfest-blue">
+        <p className="xs:text-base text-sm font-PyeongChang text-clubfest-blue">
           {clubDesc}
         </p>
       </section>
