@@ -5,8 +5,7 @@ import ClubImage from "../components/clubs/ClubImage";
 import { dummyList } from "../assets/dummyList";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import ErrorPage from "./ErrorPage";
-import LoadingSpinner from "../components/ui/LoadingSpinner";
+
 import { useNavigate } from "react-router-dom";
 import ClubContent from "../components/clubs/ClubContent";
 
