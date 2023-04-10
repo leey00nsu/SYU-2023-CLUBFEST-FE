@@ -1,4 +1,3 @@
-import React from "react";
 import ClubImage from "../clubs/ClubImage";
 import AboutButton from "./AboutButton";
 
