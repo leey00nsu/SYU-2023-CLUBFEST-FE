@@ -43,13 +43,9 @@ const ClubDetailPage = () => {
               </div>
             </section>
 
-            <ClubContent title="동아리 소개" content={clubData.clubDesc} />
-            <ClubContent title="주요활동" content={clubData.clubActivity} />
-            <ClubContent
-              title="문의 및 SNS"
-              content="카카오톡 채널 '동아리 채널'"
-              content2="010-1234-5678"
-            />
+            <ClubContent title="동아리 소개" contents={clubData.clubDesc} />
+            <ClubContent title="주요활동" contents={clubData.clubActivity} />
+            <ClubContent title="문의 및 SNS" contents={clubData.clubContact} />
           </article>
         )}
       </section>

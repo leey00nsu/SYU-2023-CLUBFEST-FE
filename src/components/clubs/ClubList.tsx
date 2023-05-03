@@ -16,6 +16,7 @@ interface ClubListProps {
 
 const ClubList = (props: ClubListProps) => {
   let list = props.list;
+
   // 동아리 순위 순으로 정렬
   if (props.sortBy === "rank") {
     list.sort((a, b) => {

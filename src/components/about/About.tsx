@@ -40,7 +40,7 @@ const About = () => {
         이라는 뜻을 가진 '다원'은 소통과 배려를\n
         중심으로 모두가 원하고, 사랑하는 동아리\n
         연합회가 되겠습니다."
-        buttonName="삼육멋사 11기 페이지"
+        buttonName="다원 SNS 구경하기"
         img="/assets/img/clubIcon/Daone.png"
       />
     </div>
