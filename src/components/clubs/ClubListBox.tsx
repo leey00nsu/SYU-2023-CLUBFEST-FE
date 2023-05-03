@@ -22,7 +22,7 @@ const ClubListBox = (props: ClubListBoxProps) => {
         <p className="xs:text-xl text-lg font-PyeongChangPeaceBold text-clubfest-blue">
           {clubName}
         </p>
-        <p className="xs:text-xs text-sm font-PyeongChang text-clubfest-blue">
+        <p className="xs:text-xs text-xs font-PyeongChang text-clubfest-blue">
           {clubTag}
         </p>
       </section>
