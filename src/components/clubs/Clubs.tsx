@@ -1,7 +1,7 @@
 import DivisionButton from "./DivisionButton";
 import ClubList from "./ClubList";
 import { useState } from "react";
-import { dummyList } from "../../assets/dummyList";
+import { clubList } from "../../assets/clubList";
 import React from "react";
 
 const Clubs = () => {
@@ -30,7 +30,7 @@ const Clubs = () => {
         ))}
       </section>
       <section className="w-full p-4 overflow-y-auto grow ">
-        <ClubList sortBy="alphabet" list={dummyList} />
+        <ClubList sortBy="alphabet" list={clubList} />
       </section>
     </>
   );

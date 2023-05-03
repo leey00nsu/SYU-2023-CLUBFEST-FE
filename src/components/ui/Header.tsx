@@ -1,7 +1,17 @@
+import { useNavigate } from "react-router-dom";
+
 const Header = () => {
+  const navigate = useNavigate();
+
+  const clickHeaderHandler = () => {
+    navigate("/clubs");
+  };
   return (
-    <header className="flex items-center justify-center w-full p-6">
-      <div className="flex flex-col items-center">
+    <header className="flex items-center justify-center w-full p-6 ">
+      <div
+        onClick={clickHeaderHandler}
+        className="flex flex-col items-center cursor-pointer"
+      >
         <p className="mb-1 text-3xl text-white font-PyeongChangPeaceBold">
           2023-1 동아리제
         </p>

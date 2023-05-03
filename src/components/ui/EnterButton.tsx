@@ -1,5 +1,3 @@
-import rabbit from "../../assets/img/rabbit.png";
-
 interface EnterButtonProps {
   children: React.ReactNode;
   onClick: () => void;
@@ -11,7 +9,7 @@ const EnterButton = (props: EnterButtonProps) => {
       className="flex justify-center p-1 text-base text-black bg-white cursor-pointer font-PyeongChang w-60 rounded-2xl"
     >
       {props.children}
-      <img className=" ml-1 w-3 object-contain" src={rabbit} />
+      <img className=" ml-1 w-3 object-contain" src="/assets/img/rabbit.png" />
     </a>
   );
 };

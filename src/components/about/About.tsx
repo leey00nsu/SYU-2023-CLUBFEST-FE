@@ -1,5 +1,4 @@
 import AboutContent from "./AboutContent";
-import x_svg from "../../assets/x.svg";
 
 const About = () => {
   return (
@@ -23,22 +22,26 @@ const About = () => {
       </section>
       <AboutContent
         title="멋쟁이사자처럼 삼육대학교 11기"
-        content1="멋쟁이사자처럼 삼육대학교는 "
-        content2="테크 기반의 아이디어를 실현을 위한"
-        content3="전국 최대 규모의 대학연합 IT 동아리이자"
-        content4="삼육대학교 중앙 동아리입니다."
+        contents="멋쟁이사자처럼 삼육대학교는\n
+        테크 기반의 아이디어를 실현을 위한\n
+        전국 최대 규모의 대학연합 IT 동아리이자\n
+        삼육대학교 중앙 동아리입니다."
         buttonName="삼육멋사 11기 페이지"
+        img="/assets/img/clubIcon/Likelion.png"
       />
       <div className="w-full flex justify-center my-10">
-        <img className="svg-glow w-12" src={x_svg} />
+        <img className="svg-glow w-12" src="/assets/x.svg" />
       </div>
       <AboutContent
-        title="멋쟁이사자처럼 삼육대학교 11기"
-        content1="멋쟁이사자처럼 삼육대학교는 "
-        content2="테크 기반의 아이디어를 실현을 위한"
-        content3="전국 최대 규모의 대학연합 IT 동아리이자"
-        content4="삼육대학교 중앙 동아리입니다."
+        title="삼육대학교 동아리연합회 다원"
+        contents="중앙동아리를 대표하는 학생자치기구로\n
+        4개 분과의 40개 동아리를 지원합니다.\n
+        '모두 다 원하는, 모두 다 사랑하는 사람'\n
+        이라는 뜻을 가진 '다원'은 소통과 배려를\n
+        중심으로 모두가 원하고, 사랑하는 동아리\n
+        연합회가 되겠습니다."
         buttonName="삼육멋사 11기 페이지"
+        img="/assets/img/clubIcon/Daone.png"
       />
     </div>
   );

@@ -2,7 +2,7 @@ import Layout from "../components/ui/Layout";
 import Header from "../components/ui/Header";
 import Nav from "../components/ui/Nav";
 import ClubImage from "../components/clubs/ClubImage";
-import { dummyList } from "../assets/dummyList";
+import { clubList } from "../assets/clubList";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -14,7 +14,7 @@ const ClubDetailPage = () => {
   const [isSet, setIsSet] = useState(false);
   const clubId = useParams().clubId;
 
-  const clubData = dummyList.filter((club) => club.clubName === clubId)[0];
+  const clubData = clubList.filter((club) => club.clubName === clubId)[0];
 
   useEffect(() => {
     if (!clubData) {
@@ -32,31 +32,19 @@ const ClubDetailPage = () => {
         {isSet && (
           <article className="flex flex-col bg-white rounded-lg p-8">
             <section className="flex justify-between w-full mb-8">
-              <ClubImage size="md" />
+              <ClubImage size="md" url={clubData.clubImg} />
               <div className="flex flex-col grow px-4 py-2">
                 <p className="text-xl font-PyeongChangPeaceBold text-clubfest-blue mb-2">
                   {clubData.clubName}
                 </p>
                 <p className="text-base font-PyeongChang text-clubfest-gray">
-                  {clubData.clubDesc}
+                  {clubData.clubTag}
                 </p>
               </div>
             </section>
 
-            <ClubContent
-              title="동아리 소개"
-              content="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt laborum fuga minima commodi doloribus non temporibus
-                neque rerum? Aliquam ipsa laborum repellat similique
-                repellendus! Fugiat quos commodi omnis dolores incidunt."
-            />
-            <ClubContent
-              title="주요활동"
-              content="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt laborum fuga minima commodi doloribus non temporibus
-                neque rerum? Aliquam ipsa laborum repellat similique
-                repellendus! Fugiat quos commodi omnis dolores incidunt."
-            />
+            <ClubContent title="동아리 소개" content={clubData.clubDesc} />
+            <ClubContent title="주요활동" content={clubData.clubActivity} />
             <ClubContent
               title="문의 및 SNS"
               content="카카오톡 채널 '동아리 채널'"
