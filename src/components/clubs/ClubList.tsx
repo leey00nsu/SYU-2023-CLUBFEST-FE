@@ -1,5 +1,6 @@
 import React from "react";
 import ClubListBox from "./ClubListBox";
+import { clubListTypes } from "../../assets/clubList";
 
 /*  ClubProps : 리스트에 표시되는 동아리 정보
     clubName : 동아리명
@@ -7,16 +8,9 @@ import ClubListBox from "./ClubListBox";
     clubDesc : 동아리 소개
     clubRank : 동아리 순위
 */
-export interface ClubProps {
-  clubName: string;
-  clubSection: string;
-  clubDesc: string;
-  clubImg: string;
-  clubRank: number;
-}
 
 interface ClubListProps {
-  list: ClubProps[];
+  list: clubListTypes[];
   sortBy: string;
 }
 

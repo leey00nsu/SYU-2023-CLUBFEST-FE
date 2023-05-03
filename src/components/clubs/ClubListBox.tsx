@@ -1,14 +1,14 @@
-import { ClubProps } from "./ClubList";
+import { clubListTypes } from "../../assets/clubList";
 import ClubImage from "./ClubImage";
 import { useNavigate } from "react-router-dom";
 
 interface ClubListBoxProps {
-  data: ClubProps;
+  data: clubListTypes;
 }
 
 const ClubListBox = (props: ClubListBoxProps) => {
   const navigate = useNavigate();
-  const { clubName, clubSection, clubDesc, clubImg } = props.data;
+  const { clubName, clubSection, clubTag, clubImg } = props.data;
 
   const clickClubHandler = () => {
     navigate(`/clubs/${clubName}`);
@@ -16,18 +16,18 @@ const ClubListBox = (props: ClubListBoxProps) => {
   return (
     <div
       onClick={clickClubHandler}
-      className=" cursor-pointer flex flex-col w-5/12 p-2  bg-white rounded-lg h-36"
+      className=" cursor-pointer flex flex-col w-5/12 p-2  bg-white rounded-lg h-40 "
     >
-      <section className="flex flex-col justify-center h-full ">
+      <section className="flex flex-col  h-full ">
         <p className="xs:text-xl text-lg font-PyeongChangPeaceBold text-clubfest-blue">
           {clubName}
         </p>
-        <p className="xs:text-base text-sm font-PyeongChang text-clubfest-blue">
-          {clubDesc}
+        <p className="xs:text-xs text-sm font-PyeongChang text-clubfest-blue">
+          {clubTag}
         </p>
       </section>
       <section className="flex justify-end h-full ">
-        <ClubImage />
+        <ClubImage url={clubImg} />
       </section>
     </div>
   );
