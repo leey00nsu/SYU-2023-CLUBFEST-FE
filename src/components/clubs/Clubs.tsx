@@ -30,7 +30,7 @@ const Clubs = () => {
         ))}
       </section>
       <section className="w-full p-4 overflow-y-auto grow ">
-        <ClubList sortBy="alphabet" list={clubList} />
+        <ClubList sortBy="rank" list={clubList} />
       </section>
     </>
   );
