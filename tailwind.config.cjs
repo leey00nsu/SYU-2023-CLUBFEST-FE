@@ -10,6 +10,7 @@ module.exports = {
         "clubfest-blue": "#0D1C57",
         "clubfest-gray": "#101010",
         "clubfest-deepgray": "#8C8C8C",
+        "clubfest-lightgray": "#D9D9D9",
       },
       fontFamily: {
         PyeongChangPeaceBold: ["PyeongChangPeace-Bold", "Arial"],
