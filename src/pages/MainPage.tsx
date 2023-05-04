@@ -7,6 +7,7 @@ import Clubs from "../components/clubs/Clubs";
 import Timetable from "../components/timetable/Timetable";
 import About from "../components/about/About";
 import Nav from "../components/ui/Nav";
+import Footer from "../components/ui/Footer";
 
 interface MainPageProps {
   menu: string;
@@ -33,6 +34,7 @@ const MainPage = (props: MainPageProps) => {
       {props.menu === "clubs" && <Clubs />}
       {props.menu === "timetable" && <Timetable />}
       {props.menu === "about" && <About />}
+      <Footer />
     </Layout>
   );
 };
