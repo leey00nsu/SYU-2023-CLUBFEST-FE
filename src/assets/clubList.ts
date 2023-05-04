@@ -1,3 +1,14 @@
+/*  ClubProps : 리스트에 표시되는 동아리 정보
+    clubName : 동아리명
+    clubSection : 동아리 분과
+    clubDesc : 동아리 소개
+    clubRank : 동아리 순위
+    clubImg : 동아리 아이콘 url
+    clubTag : 동아리 해시태그
+    clubActivity : 동아리 활동
+    clubContact : 동아리 연락처
+*/
+
 export interface clubListTypes {
   clubName: string;
   clubSection: string;

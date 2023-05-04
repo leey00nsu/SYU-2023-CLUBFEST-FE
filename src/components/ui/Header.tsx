@@ -4,7 +4,8 @@ const Header = () => {
   const navigate = useNavigate();
 
   const clickHeaderHandler = () => {
-    navigate("/clubs");
+    sessionStorage.setItem("isLanding", "true");
+    navigate("/");
   };
   return (
     <header className="flex items-center justify-center w-full p-6 ">

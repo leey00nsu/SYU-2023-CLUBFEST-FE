@@ -28,6 +28,7 @@ const About = () => {
         삼육대학교 중앙 동아리입니다."
         buttonName="삼육멋사 11기 페이지"
         img="/assets/img/clubIcon/Likelion.png"
+        url="https://syulion11th.github.io/likelionpage-front/"
       />
       <div className="w-full flex justify-center my-10">
         <img className="svg-glow w-12" src="/assets/x.svg" />
@@ -42,6 +43,7 @@ const About = () => {
         연합회가 되겠습니다."
         buttonName="다원 SNS 구경하기"
         img="/assets/img/clubIcon/Daone.png"
+        url="https://instagram.com/syu_club_40"
       />
     </div>
   );

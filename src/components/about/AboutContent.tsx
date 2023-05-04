@@ -6,10 +6,13 @@ interface AboutContentProps {
   contents: string;
   buttonName: string;
   img: string;
+  url: string;
 }
 
 const AboutContent = (props: AboutContentProps) => {
   const contentsArr = props.contents.split("\\n");
+
+  const clickButtonHandler = () => {};
 
   return (
     <section className="w-full flex px-8 justify-center xs:gap-10 gap-3">
@@ -29,7 +32,7 @@ const AboutContent = (props: AboutContentProps) => {
             </p>
           ))}
         </div>
-        <AboutButton>{props.buttonName}</AboutButton>
+        <AboutButton url={props.url}>{props.buttonName}</AboutButton>
       </article>
     </section>
   );

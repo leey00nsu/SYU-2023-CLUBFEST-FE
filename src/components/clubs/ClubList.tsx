@@ -2,14 +2,8 @@ import React from "react";
 import ClubListBox from "./ClubListBox";
 import { clubListTypes } from "../../assets/clubList";
 
-/*  ClubProps : 리스트에 표시되는 동아리 정보
-    clubName : 동아리명
-    clubSection : 동아리 분과
-    clubDesc : 동아리 소개
-    clubRank : 동아리 순위
-*/
-
 interface ClubListProps {
+  activeDivision: string;
   list: clubListTypes[];
   sortBy: string;
 }
@@ -33,6 +27,9 @@ const ClubList = (props: ClubListProps) => {
       return 0;
     });
   }
+
+  list = list.filter((club) => club.clubSection === props.activeDivision);
+
   return (
     <article className="w-full justify-center flex flex-wrap gap-6">
       {list.map((list, index) => (
@@ -40,7 +37,7 @@ const ClubList = (props: ClubListProps) => {
       ))}
       {/* 리스트의 마지막이 홀수이면 가상의 박스를 하나 추가하여 열을 맞춥니다. */}
       {list.length % 2 == 1 && (
-        <div className=" invisible flex flex-col w-48 p-2 bg-white rounded-lg h-36"></div>
+        <div className=" invisible flex flex-col w-5/12 p-2 bg-white rounded-lg h-40"></div>
       )}
     </article>
   );

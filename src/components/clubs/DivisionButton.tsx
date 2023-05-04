@@ -15,7 +15,7 @@ const DivisionButton = (props: DivisionButtonProps) => {
       onClick={() => props.changeDivision(props.division)}
       className={classes}
     >
-      {props.division}
+      {props.division}분과
     </div>
   );
 };
