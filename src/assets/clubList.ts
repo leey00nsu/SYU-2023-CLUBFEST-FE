@@ -80,7 +80,7 @@ export const clubList: clubListTypes[] = [
   {
     clubSection: "문화",
     clubName: "클래시아",
-    clubImg: "/assets/img/clubIcon/Clasia.png",
+    clubImg: "/assets/img/clubIcon/Classia.png",
     clubTag: "#음악 #버스킹 #밴드",
     clubDesc:
       "음악을 사랑하는 사람들이 모여 서로의 음악취향을 공유하며 소통하는 중앙동아리 중 유일한 음악동아리입니다. 배움을 원하시는 분들을 위해 기타강습도 진행하고 뜻이 맞는 사람들끼리 모여 버스킹, 밴드 공연을 정기적으로 가집니다.",
@@ -124,7 +124,7 @@ export const clubList: clubListTypes[] = [
   {
     clubSection: "문화",
     clubName: "ADIOS",
-    clubImg: "/assets/img/clubIcon/ADIOS.png",
+    clubImg: "/assets/img/clubIcon/Adios.png",
     clubTag: "#치어리딩 #응원단 #치어리더",
     clubDesc:
       "대학 응원 문화 증진을 목표로 설립된 동아리로 여러분의 대학 생활에 뜨거운 응원을 전하기 위해 노력하겠습니다",
@@ -258,7 +258,7 @@ export const clubList: clubListTypes[] = [
   {
     clubSection: "체육",
     clubName: "러너스하이",
-    clubImg: "/assets/img/clubIcon/Runushigh.png",
+    clubImg: "/assets/img/clubIcon/Runnushigh.png",
     clubTag: "#건강 #운동동아리 #러하",
     clubDesc: "러하 (러너스하이 하이라는 뜻)",
     clubActivity: "야외 운동",
@@ -355,5 +355,37 @@ export const clubList: clubListTypes[] = [
     clubActivity: "정기 스터디 및 프로젝트 활동",
     clubContact: "대표 010-9608-8304",
     clubRank: 12,
+  },
+  {
+    clubSection: "체육",
+    clubName: "데피노스",
+    clubImg: "/assets/img/clubIcon/Depinos.png",
+    clubTag: "#농구 #운동 #열정",
+    clubDesc: "악바리들의 새로운 이름 데피노스 입니다.",
+    clubActivity: "농구 연습 및 농구시합",
+    clubContact: "인스타 @syu._.de_pinos_",
+    clubRank: 28,
+  },
+  {
+    clubSection: "체육",
+    clubName: "랠리유",
+    clubImg: "/assets/img/clubIcon/Ralleyu.png",
+    clubTag: "#테니스 #랠리 #테린이",
+    clubDesc:
+      "너와 함께 랠리를 한다는 뜻인 랠리유는 테니스를 배울 수 있는 중앙동아리입니다.\n요즘 인기 있는 테니스를 학우들과 함께 천천히 재밌게 테니스를 배워 나갈 수 있습니다.",
+    clubActivity: "정기 테니스 연습 및 활동",
+    clubContact: "",
+    clubRank: 30,
+  },
+  {
+    clubSection: "체육",
+    clubName: "SU-bike",
+    clubImg: "",
+    clubTag: "#자전거 #체력 #낭만",
+    clubDesc:
+      "su-bike는 삼육대학교의 유일한 자전거 동아리로 로드, 하이브리드, 산악 및 전기자전거 총 31대로 운영하고 있습니다.\n동기들과 같이 자전거를 타며 우정과 체력을 쌓는 것이 목적입니다.",
+    clubActivity: "자전거 라이딩, 스킬 연습 및 폐 자전거 수리",
+    clubContact: "010-2628-9235",
+    clubRank: 32,
   },
 ];
