@@ -124,7 +124,7 @@ export const clubList: clubListTypes[] = [
   {
     clubSection: "문화",
     clubName: "ADIOS",
-    clubImg: "/assets/img/clubIcon/Adios.png",
+    clubImg: "/assets/img/clubIcon/ADIOS.png",
     clubTag: "#치어리딩 #응원단 #치어리더",
     clubDesc:
       "대학 응원 문화 증진을 목표로 설립된 동아리로 여러분의 대학 생활에 뜨거운 응원을 전하기 위해 노력하겠습니다",
