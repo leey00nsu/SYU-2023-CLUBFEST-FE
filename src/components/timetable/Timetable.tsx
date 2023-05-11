@@ -11,7 +11,6 @@ const Timetable = () => {
     "한편",
     "일곱빛",
     "GDSC",
-    "호버링",
     "Team MFS",
     "은빛샘",
   ];
@@ -28,7 +27,6 @@ const Timetable = () => {
     "Draftmation",
     "P.P.P",
     "빛감",
-    "싱클벙클",
     "호버링",
     "맛-따라 멋-따라",
   ];
@@ -52,7 +50,7 @@ const Timetable = () => {
         ))}
       </section>
       <section className="w-full flex flex-col items-center mb-14">
-        <p className=" font-PyeongChang text-white text-sm mb-2">24일 학술제</p>
+        <p className=" font-PyeongChang text-white text-sm mb-2">24일 문화제</p>
         <p className="w-6 mb-2 border-b"></p>
         {day24.map((club, index) => (
           <p key={index} className=" font-PyeongChang text-white text-sm mb-1">
