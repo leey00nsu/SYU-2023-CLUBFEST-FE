@@ -7,6 +7,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        "clubfest-bgBlue": "#0a1240",
         "clubfest-blue": "#0D1C57",
         "clubfest-gray": "#101010",
         "clubfest-deepgray": "#8C8C8C",
