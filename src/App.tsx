@@ -11,7 +11,6 @@ import { motion } from "framer-motion";
 
 function App() {
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
-  const [bgColor, setBgColor] = useState("#000000");
   const handleResize = () => {
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
@@ -40,14 +39,6 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    if (innerWidth > 1200) {
-      setBgColor("#0a1240");
-    } else {
-      setBgColor("#000000");
-    }
-  }, [innerWidth]);
-
   let styles = "w-screen flex justify-center overflow-y-auto";
 
   if (innerWidth > 1200) {
@@ -55,18 +46,23 @@ function App() {
   }
 
   return (
-    <motion.div
-      key={bgColor}
-      initial={{ backgroundColor: innerWidth > 1200 ? "#ffffff" : "#0a1240" }}
-      animate={{ backgroundColor: innerWidth > 1200 ? "#0a1240" : "#ffffff" }}
-      transition={{
-        duration: 0.2,
-      }}
-    >
+    <motion.div>
       <div id="app" className={styles}>
+        <motion.div
+          initial={{
+            opacity: innerWidth > 1200 ? 0 : 1,
+          }}
+          animate={{
+            opacity: innerWidth > 1200 ? 1 : 0,
+          }}
+          transition={{
+            duration: 0.2,
+          }}
+          className=" bg-cover z-auto absolute w-screen h-full bg-[url('/assets/img/promobg.png')]"
+        />
         {innerWidth > 1200 && (
           <motion.div
-            className=" flex justify-center"
+            className=" flex justify-center z-10"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
