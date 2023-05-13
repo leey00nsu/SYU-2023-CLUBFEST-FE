@@ -33,7 +33,7 @@ const About = () => {
           url="https://syulion11th.github.io/likelionpage-front/"
         />
         <div className="w-full flex justify-center my-10">
-          <img className="svg-glow w-12" src="/assets/x.svg" />
+          <img className="svg-glow w-12 h-12" src="/assets/x.svg" />
         </div>
         <AboutContent
           title="삼육대학교 동아리연합회 다원"

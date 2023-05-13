@@ -50,7 +50,7 @@ function App() {
       <div id="app" className={styles}>
         <motion.div
           initial={{
-            opacity: innerWidth > 1200 ? 0 : 1,
+            opacity: innerWidth > 1200 ? 0 : 0,
           }}
           animate={{
             opacity: innerWidth > 1200 ? 1 : 0,
