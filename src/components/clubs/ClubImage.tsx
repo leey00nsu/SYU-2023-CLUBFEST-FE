@@ -41,7 +41,11 @@ const ClubImage = (props: ClubImageProps) => {
   } else {
     return (
       <div className={classes + " bg-transparent"}>
-        <img className="w-full h-full object-fit" src={props.url} />
+        <img
+          loading="lazy"
+          className="w-full h-full object-fit"
+          src={props.url}
+        />
       </div>
     );
   }

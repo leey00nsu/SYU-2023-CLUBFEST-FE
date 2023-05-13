@@ -50,7 +50,7 @@ function App() {
       <div id="app" className={styles}>
         <motion.div
           initial={{
-            opacity: innerWidth > 1200 ? 0 : 1,
+            opacity: innerWidth > 1200 ? 0 : 0,
           }}
           animate={{
             opacity: innerWidth > 1200 ? 1 : 0,
@@ -72,7 +72,7 @@ function App() {
             }}
           >
             <img
-              className="w-[600px] object-scale-down"
+              className="w-[500px] object-scale-down"
               src="/assets/img/promo.png"
             />
           </motion.div>
