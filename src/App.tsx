@@ -72,7 +72,7 @@ function App() {
             }}
           >
             <img
-              className="w-[600px] object-scale-down"
+              className="w-[500px] object-scale-down"
               src="/assets/img/promo.png"
             />
           </motion.div>

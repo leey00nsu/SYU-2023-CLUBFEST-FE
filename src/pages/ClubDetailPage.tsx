@@ -14,7 +14,9 @@ const ClubDetailPage = () => {
   const [isSet, setIsSet] = useState(false);
   const clubId = useParams().clubId;
 
-  const clubData = clubList.filter((club) => club.clubName === clubId)[0];
+  const clubData = clubList.filter(
+    (club) => club.clubName.replace(/\./g, "") === clubId
+  )[0];
 
   useEffect(() => {
     if (!clubData) {

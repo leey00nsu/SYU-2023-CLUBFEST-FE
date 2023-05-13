@@ -11,7 +11,7 @@ const ClubListBox = (props: ClubListBoxProps) => {
   const { clubName, clubSection, clubTag, clubImg } = props.data;
 
   const clickClubHandler = () => {
-    navigate(`/clubs/${clubName}`);
+    navigate(`/clubs/${clubName.replace(/\./g, "")}`);
   };
   return (
     <div
