@@ -72,6 +72,8 @@ function App() {
             }}
           >
             <img
+              loading="lazy"
+              alt="syu-clubfest promo"
               className="w-[500px] object-scale-down"
               src="/assets/img/promo.png"
             />

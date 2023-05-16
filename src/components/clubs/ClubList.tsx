@@ -33,7 +33,7 @@ const ClubList = (props: ClubListProps) => {
   return (
     <article className="w-full justify-center flex flex-wrap gap-6">
       {list.map((list, index) => (
-        <ClubListBox key={index} data={list} />
+        <ClubListBox key={list.clubName} data={list} />
       ))}
       {/* 리스트의 마지막이 홀수이면 가상의 박스를 하나 추가하여 열을 맞춥니다. */}
       {list.length % 2 == 1 && (
