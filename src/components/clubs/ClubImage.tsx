@@ -1,5 +1,3 @@
-import React from "react";
-
 interface ClubImageProps {
   default: boolean;
   size: string;
@@ -40,13 +38,16 @@ const ClubImage = (props: ClubImageProps) => {
     );
   } else {
     return (
-      <div className={classes + " bg-transparent"}>
-        <img
-          loading="lazy"
-          className="w-full h-full object-fit"
-          src={props.url}
-        />
-      </div>
+      <>
+        <div className={classes.concat(" bg-transparent")}>
+          <img
+            alt={props.url}
+            loading="eager"
+            className="w-full h-full object-fit"
+            src={props.url}
+          />
+        </div>
+      </>
     );
   }
 };
