@@ -7,6 +7,7 @@ const Header = () => {
     sessionStorage.setItem("isLanding", "true");
     navigate("/");
   };
+
   return (
     <header className="flex  items-center justify-center w-full p-6">
       <div
@@ -19,12 +20,6 @@ const Header = () => {
         <p className="text-[13px] text-white font-PyeongChangPeace">
           멋쟁이사자처럼 SYU X 동아리연합회 다원
         </p>
-        <a className="my-2 h-[20px]">
-          <img
-            alt="hits"
-            src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fsyu-2023-clubfest-fe.pages.dev&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"
-          />
-        </a>
       </div>
     </header>
   );

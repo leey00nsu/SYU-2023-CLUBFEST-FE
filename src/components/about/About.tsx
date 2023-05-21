@@ -53,6 +53,12 @@ const About = () => {
           url="https://instagram.com/syu_club_40"
         />
       </section>
+      <div className="flex w-full justify-center my-2 h-[20px]">
+        <img
+          alt="Hits"
+          src="https://hits.sh/syu-2023-clubfest-fe.vercel.app.svg?view=today-total"
+        />
+      </div>
     </div>
   );
 };
